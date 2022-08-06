@@ -1,0 +1,99 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* Start Global */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(99, 27, 27);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 39.4%;
+  padding: 4.66% 0;
+  border-radius: 7px;
+  background-color: #fff;
+}
+
+.circular-progress {
+  position: relative;
+  height: 15.57rem;
+  width: 40.6%;
+  border-radius: 50%;
+  background: conic-gradient(#267972 3.6deg, #ededed 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: #3cc7bc;
+}
+
+.progress-value {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  color: #184844;
+}
+
+.text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #393333;
+}
+
+/* Meida */
+@media (max-width: 599px) {
+  .circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #3cc7bc;
+  }
+  .progress-value {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 15px;
+  }
+  .circular-progress {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 45.5%;
+  }
+  .circular-progress {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Meida End */
